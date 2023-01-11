@@ -58,38 +58,47 @@
                             <div class="row justify-content-center">
                                 <div class="col-md-10 col-lg-9 col-xl-9 order-2 order-lg-1">
                                     <div class="d-flex flex-column align-items-center mb-4">
-                                        <a class="navbar-brand " href="index.php"><img src="images/logo_1.png" alt="logo" width="200" height="150"></a>
+                                        <a class="navbar-brand" href="index.php"><img src="images/logo_1.png" alt="logo" width="200" height="150"></a>
                                         <p class="text-center h4 fw-bold mb-5 mx-1 mx-md-4 mt-4" style="color: #005d89;">Student Registration Form</p>
                                     </div>
 
 
-                                    <form class="mx-1 mx-md-4 was-validated" action="register.php" method="post">
+                                    <form class="mx-1 mx-md-4 was-validated needs-validation" action="register.php" method="post">
 
                                         <div class="d-flex flex-row align-items-center">
-                                            <div class="flex-fill mb-0">
-                                                <div class="d-flex flex-column align-items-left mb-4">
-                                                    <label class="form-label" for="firstname">First Name <span class="form-required"> * </span></label>
-                                                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required="" />
+                                            <div class="d-flex flex-column align-items-left mb-4">
+
+                                                <label class="form-label" for="firstname">First Name </label>
+                                                <div class="flex-fill mb-0">
+                                                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="First Name" required />
+                                                    <div class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </div>
                                                 </div>
 
                                             </div>
+
                                             &nbsp;&nbsp;&nbsp;
 
-                                            <div class="flex-fill mb-0">
 
-                                                <div class="d-flex flex-column align-items-left mb-4">
-                                                    <label class="form-label" for="lastname">Last Name <span class="form-required"> * </span></label>
+                                            <div class="d-flex flex-column align-items-left mb-4">
+                                                <label class="form-label" for="lastname">Last Name </label>
+                                                <div class="flex-fill mb-0">
                                                     <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Last Name" required="" />
-                                                    
+
+                                                    <span class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="d-flex flex-column align-items-left">
-                                            <label class="form-label" for="gender">Gender <span class="form-required"> * </span></label>
+                                            <label class="form-label" for="gender">Gender</label>
                                             <div class="d-flex flex-row align-items-center mb-4">
 
                                                 <div class="form-check">
+
                                                     <input class="form-check-input" type="radio" name="optradio" id="flexRadioDefault1" required="" />
                                                     <span class="form-label" for="flexRadioDefault1"> Male</span>
                                                 </div>
@@ -105,7 +114,7 @@
                                         <!-- Department -->
 
                                         <div class="d-flex flex-column align-items-left">
-                                            <label class="form-label" for="department">Department<span class="form-required"> * </span></label>
+                                            <label class="form-label" for="department">Department</label>
                                             <div class="d-flex flex-row align-items-center mb-4">
 
                                                 <div class="form-group flex-fill"><select class="form-control transparent-input" id="dept1" name="dept1" onchange="display1(this.value);" required="">
@@ -125,17 +134,26 @@
                                                         <option value="Instrumentation Engineering">B.E Instrumentation Engineering</option>
                                                         <option value="dept">others</option>
                                                     </select>
+                                                    <span class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </span>
                                                 </div><br>
                                             </div>
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4 ">
-                                            <div class="form-group flex-fill"><input class="form-control transparent-input" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="dept" name="dept" placeholder="Type your Department e.g(B.E Electronic and Engineering)" style="display:none;" type="text" /></div>
+                                            <div class="form-group flex-fill"><input class="form-control transparent-input" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="dept" name="dept" placeholder="Type your Department e.g(B.E Electronic and Engineering)" style="display:none;" type="text" />
+                                                <span class="invalid-feedback">
+                                                    Required<span class="form-required"> * </span>
+                                                </span>
+                                            </div>
+
                                         </div>
+
 
                                         <!-- Internship -->
                                         <div class="d-flex flex-column align-items-left">
-                                            <label class="form-label" for="internship">Internship<span class="form-required"> * </span></label>
+                                            <label class="form-label" for="internship">Internship</label>
                                             <div class="d-flex flex-row align-items-center mb-4">
                                                 <div class="form-group flex-fill"><select class="form-control transparent-input" id="intern1" name="intern1" onchange="display2(this.value);" required="">
                                                         <option value="" disabled selected>Select Internship </option>
@@ -144,30 +162,44 @@
                                                         <option value="Machine Learning">Machine Learning</option>
                                                         <option value="Deep Learning">Deep Learning</option>
                                                         <option value="intern">others</option>
-                                                    </select></div><br>
+                                                    </select>
+                                                    <span class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </span>
+                                                </div><br>
                                             </div>
                                         </div>
 
                                         <div class="d-flex flex-row align-items-center mb-4 ">
-                                            <div class="form-group flex-fill"><input class="form-control transparent-input" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="intern" name="intern" placeholder="Type your Internship Preference" style="display:none;" type="text" /></div>
+                                            <div class="form-group flex-fill"><input class="form-control transparent-input" data-msg="Please enter at least 4 chars" data-rule="minlen:4" id="intern" name="intern" placeholder="Type your Internship Preference" style="display:none;" type="text" />
+                                                <span class="invalid-feedback">
+                                                    Required<span class="form-required"> * </span>
+                                                </span>
+                                            </div>
                                         </div>
 
                                         <!-- College Name -->
                                         <div class="d-flex flex-column align-items-left">
-                                            <label class="form-label" for="college"> College Name<span class="form-required"> * </span></label>
+                                            <label class="form-label" for="College"> College</label>
                                             <div class="d-flex flex-row align-items-center mb-4">
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="text" id="college" name="college" class="form-control" required="" placeholder="College Name" />
+                                                <div class="flex-fill mb-0">
+                                                    <input type="text" id="college" name="college" class="form-control" required="" placeholder="College" />
+                                                    <span class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <!-- College Register Number -->
                                         <div class="d-flex flex-column align-items-left">
-                                            <label class="form-label" for="register"> College Register Number<span class="form-required"> * </span></label>
+                                            <label class="form-label" for="register"> College Register Number</label>
                                             <div class="d-flex flex-row align-items-center mb-4">
-                                                <div class="form-outline flex-fill mb-0">
+                                                <div class="flex-fill mb-0">
                                                     <input type="text" id="register" name="register" class="form-control" required="" placeholder="College Register Number" />
+                                                    <span class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -176,10 +208,13 @@
 
                                         <!-- Year of passed out -->
                                         <div class="d-flex flex-column align-items-left">
-                                            <label class="form-label" for="yopo"> Year of passed out<span class="form-required"> * </span></label>
+                                            <label class="form-label" for="yopo"> Year of passed out</label>
                                             <div class="d-flex flex-row align-items-center mb-4">
-                                                <div class="form-outline flex-fill mb-0">
+                                                <div class="flex-fill mb-0">
                                                     <input type="text" id="yopo" name="yopo" class="form-control" required="" placeholder="Year of passed out" />
+                                                    <span class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -187,10 +222,13 @@
 
                                         <!--contact -->
                                         <div class="d-flex flex-column align-items-left">
-                                            <label class="form-label" for="contact"> Contact<span class="form-required"> * </span></label>
+                                            <label class="form-label" for="contact"> Contact</label>
                                             <div class="d-flex flex-row align-items-center mb-4">
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="number" id="contact" name="contact" class="form-control" required="" placeholder="Contact" />
+                                                <div class="flex-fill mb-0">
+                                                    <input type="tel" id="contact" name="contact" class="form-control" required="" placeholder="Contact" pattern="^\d{10}$" />
+                                                    <span class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -198,16 +236,19 @@
 
                                         <!-- email -->
                                         <div class="d-flex flex-column align-items-left">
-                                            <label class="form-label" for="email"> Email<span class="form-required"> * </span></label>
+                                            <label class="form-label" for="email"> Email</label>
                                             <div class="d-flex flex-row align-items-center mb-4">
-                                                <div class="form-outline flex-fill mb-0">
-                                                    <input type="email" id="email" name="email" class="form-control" required="" placeholder="Email ID" />
+                                                <div class="flex-fill mb-0">
+                                                    <input type="email" id="email" name="email" class="form-control md-outline" required="" placeholder="Email ID" />
+                                                    <span class="invalid-feedback">
+                                                        Required<span class="form-required"> * </span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <input type="submit" class="btn btn-lg" style="background-color: #005d89; color: #fff;" value="Register">
+                                            <button type="submit" class="btn btn-lg" style="background-color: #005d89; color: #fff;">Register</button>
                                         </div>
 
                                     </form>
